@@ -1,0 +1,47 @@
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+export PATH=/usr/local/var/nodebrew/current/bin:$PATH
+
+#export PERL_CPANM_OPT="--local-lib=$HOME/.perl-extlib"
+#export PERL5LIB="$HOME/perl5/perlbrew/perls/perl-5.26.2/lib/site_perl/5.26.2/darwin-2level:$HOME/.perl-extlib/lib/perl5:$PERL5LIB"
+
+#export PATH="$HOME/.perl-extlib/bin:$PATH"
+
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+
+eval "$(rbenv init -)"
+
+export PATH=$HOME/.goenv/bin:$PATH
+eval "$(goenv init -)"
+
+eval "$(direnv hook bash)"
+export EDITOR=vim
+export PATH="/usr/local/opt/jpeg-turbo/bin:$PATH"
+
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+export PS1='\[\e[1;36m\][\h: \W]$\[\e[1;32m\]$(__git_ps1)\[\e[0m\] '
+
+export PATH=/usr/local/opt/openssl/bin:/usr/local/Cellar/git/2.18.0/bin:/usr/local/opt/curl/bin:$PATH
+source ~/perl5/perlbrew/etc/bashrc
+
+alias docker-exe="docker exec -it $@"
+alias print-inc="perl -e 'print \"@INC\"'"
+alias search-module="find `perl -e 'print \"@INC\";'` -name $@"
+
+# For OpenSSL(brew installed)
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/openssl/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+
+
+export GOPATH="$HOME/go"
+
+export PATH="/usr/local/opt/libxml2/bin:$PATH:$GOPATH/bin"
+
+# glicotch
+export AWS_PROFILE=sam-cli-test
+
+# Flutter
+export PATH=$PATH:/Users/miya/dev_tool/flutter/bin
